@@ -1,0 +1,25 @@
+DATA_EXPLORING_ROOT: './'
+INPUT_ROOT: './'
+OUTPUT_ROOT: '/data/'
+
+IMAGES_ROOT: '/data/'
+TRAIN_IMAGES_ROOT: '/data/train/'
+EVAL_IMAGES_ROOT: '/data/eval/'
+DATASET_ROOT: '/data/dataset/'
+
+TRAIN_IMAGE_DATA: './train_image_data.json'
+ANNOTATION_FILE: './annotation.json'
+EVAL_IMAGE_DATA: './eval_image_data.json'
+CATEGORY_KEY_FILE: './category_key.json'
+SAMPLE_SUBMISSION_FILE: './sample_submission.csv'
+
+DATASET_CONFIG: '/data/dataset.yaml'
+MODEL_NAME: 'FathomNet-YOLOv8'
+
+N_EPOCHS: 50
+N_BATCH: 8
+RANDOM_STATE: 2023
+SAMPLE_SIZE: 1.0
+TEST_SIZE: 0.2
+INDEX: 'id'
+CONFIDENCE: 0.15

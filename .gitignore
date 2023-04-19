@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pytorch runs
+runs/
+*.pt
+
+# submission files
+*submission*.csv
+
+# data
+old_data_files/
