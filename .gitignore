@@ -134,6 +134,7 @@ runs/
 
 # submission files
 *submission*.csv
+submissions/
 
 # data
 old_data_files/
