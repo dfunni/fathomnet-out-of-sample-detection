@@ -9,7 +9,7 @@ from ultralytics import YOLO
 ultralytics.checks()
 torch.cuda.empty_cache()
 
-with open('config.yaml', 'r') as ymlfile:
+with open('/data/config.yaml', 'r') as ymlfile:
     config = yaml.load(ymlfile, Loader=yaml.Loader)
 
 model = YOLO('runs/detect/FathomNet-YOLOv82/weights/best.pt')

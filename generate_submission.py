@@ -19,7 +19,7 @@ def main(args):
     filelist = glob.glob('runs/detect/predict2/labels/*.txt')
 
     cat_df = pd.read_json('category_key.json')
-    shallow = [10, 51, 61, 103, 104, 105, 116, 119, 133, 160, 214, 259, 260, 274]
+    shallow = [10, 51, 61, 103, 104, 105, 116, 119, 133, 160, 214, 259, 260, 274] ## FIXME
     mapper = cat_df[['id', 'index']].to_dict()['id']
 
     for i, file in enumerate(filelist):

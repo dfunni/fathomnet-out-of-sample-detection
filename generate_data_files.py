@@ -8,47 +8,49 @@ TRAINPATH = "/data/train/"
 coco = COCO("object_detection/train.json")
 coco_eval = COCO("object_detection/eval.json")
 
-shallow_species = {160: True,
-                   37: False,
-                   119: True,
-                   51: True,
-                   10: True,
-                   146: False, # 1087m
-                   52: False,
-                   88: False,
-                   125: False,
-                   203: False, # 927m
-                   214: True, # not much data
-                   1: False,
-                   259: True,
-                   9: False, # 1000m
-                   105: True,
-                   211: False,
-                   133: True,
-                   142: False,
-                   70: False,
-                   260: True,
-                   274: True,
-                   174: False,
-                   205: False, # not much data
-                   120: False,
-                   219: False, # not much data
-                   81: False,
-                   69: False,
-                   104: True,
-                   218: False,
-                   16: False,
-                   103: True,
-                   224: False,
-                   228: False,
-                   242: False,
-                   61: True, # mostly
-                   116: True,
-                   255: False,
-                   202: False,
-                   108: False, # unknown
-                   11: False
-                   }
+
+## TODO fix this section to read from json file
+# shallow_species = {160: True,
+#                    37: False,
+#                    119: True,
+#                    51: True,
+#                    10: True,
+#                    146: False, # 1087m
+#                    52: False,
+#                    88: False,
+#                    125: False,
+#                    203: False, # 927m
+#                    214: True, # not much data
+#                    1: False,
+#                    259: True,
+#                    9: False, # 1000m
+#                    105: True,
+#                    211: False,
+#                    133: True,
+#                    142: False,
+#                    70: False,
+#                    260: True,
+#                    274: True,
+#                    174: False,
+#                    205: False, # not much data
+#                    120: False,
+#                    219: False, # not much data
+#                    81: False,
+#                    69: False,
+#                    104: True,
+#                    218: False,
+#                    16: False,
+#                    103: True,
+#                    224: False,
+#                    228: False,
+#                    242: False,
+#                    61: True, # mostly
+#                    116: True,
+#                    255: False,
+#                    202: False,
+#                    108: False, # unknown
+#                    11: False
+#                    }
 
 cat_df = pd.DataFrame.from_dict(coco.cats, orient='index')
 
