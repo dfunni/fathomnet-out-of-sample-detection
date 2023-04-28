@@ -162,8 +162,7 @@ def remap(cat_lst, mapper):
     return out
 
 
-def generate_submission_df(input_path='workspaces/fathomnet-out-of-sample-detection/runs/detect/predict/labels/',
-                           conf_threshold=0.25):
+def generate_submission_df(input_path='runs/detect/predict/labels/', conf_threshold=0.25):
     '''Generates dataframe of information from infrence output files.
     Args:
         input_path: (string) path to prediction labels files
@@ -174,7 +173,7 @@ def generate_submission_df(input_path='workspaces/fathomnet-out-of-sample-detect
     out = {}
     filelist = glob.glob(input_path + '*.txt')
 
-    cat_df = pd.read_json('workspaces/fathomnet-out-of-sample-detection/category_key.json')
+    cat_df = pd.read_json('category_key.json')
     shallow = cat_df[cat_df.shallow_species == True]['index'].to_list()
     mapper = cat_df[['id', 'index']].to_dict()['id']
 

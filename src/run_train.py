@@ -9,7 +9,7 @@ from ultralytics import YOLO
 import os
 import pandas as pd
 
-import utils
+from utils import utils
 
 ultralytics.checks()
 torch.cuda.empty_cache()
@@ -21,8 +21,10 @@ with open('/data/config.yaml', 'r') as ymlfile:
 os.system('../clear_dataset.sh')
 
 
-train_image_data = utils.read_train_image_data()
-annotation_data = utils.read_annotation_data()
+# train_image_data = utils.read_train_image_data()
+# annotation_data = utils.read_annotation_data()
+train_image_data = pd.read_json('../train_image_data65.json').set_index('image_id') ## FIXME
+annotation_data = pd.read_json('../annotation65.json').set_index('id')
 
 # category_data = utils.read_category_keys()
 # eval_image_data = utils.read_eval_image_data()
@@ -40,7 +42,7 @@ print('\nCreating val dataset')
 utils.create_yolo_dataset(X_val, annotation_data, data_type='val')
 
 print('\nRuning model')
-model = YOLO('yolov8m.pt')
+model = YOLO('yolov8l.pt')
 
 results = model.train(
    data=str(config['DATASET_CONFIG']),
