@@ -12,7 +12,7 @@ torch.cuda.empty_cache()
 with open('/data/config.yaml', 'r') as ymlfile:
     config = yaml.load(ymlfile, Loader=yaml.Loader)
 
-model = YOLO('runs/detect/FathomNet-YOLOv82/weights/best.pt')
+model = YOLO('./runs/detect/FathomNet-YOLOv8_65/weights/best.pt')
 
 predict = model.predict(source=config['EVAL_IMAGES_ROOT'],
                       save=True,

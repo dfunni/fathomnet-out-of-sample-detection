@@ -42,7 +42,7 @@ print('\nCreating val dataset')
 utils.create_yolo_dataset(X_val, annotation_data, data_type='val')
 
 print('\nRuning model')
-model = YOLO('yolov8l.pt')
+model = YOLO('yolov8m.pt')
 
 results = model.train(
    data=str(config['DATASET_CONFIG']),
